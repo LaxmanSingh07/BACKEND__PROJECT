@@ -1,0 +1,9 @@
+SEARCH AND FLIGHTS SERVICE 
+create Flights
+Delete Flights
+Update Flights
+Search Flights
+    Based on multiple criteria we can search for flights
+    pagnation is also implemented
+
+
