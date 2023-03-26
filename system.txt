@@ -30,3 +30,16 @@ what is the differece between the npm and npx ?
     npx is used to run the packages
 
 git commit --ammend
+
+
+whilmsical
+
+
+ npx sequelize model:generate --name City --attributes name:String  
+
+migrations ---> it will help in incrementally updating the database
+    it will help in creating the tables in the database
+    it will help in updating the tables in the database
+    it will help in deleting the tables in the database
+
+queryinterface --> 
