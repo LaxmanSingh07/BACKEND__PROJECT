@@ -9,16 +9,17 @@
     - Inside the `src/config` folder create a new file `cofig.json` and then add the following piece of json
 
 ```
-    {
-
-"development": {
-"username": <YOUR_DB_NAME>,
-"password": "<YOUR_DB_PASSWORD>",
-"database": "FLIGTS_Search_DB",
-"host": "127.0.0.1",
-"dialect": "mysql"
+  
+  
+{
+    "development": {
+    "username": <YOUR_DB_NAME>,
+    "password": "<YOUR_DB_PASSWORD>",
+    "database": "FLIGTS_Search_DB",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+    }
 }
-}
-    ```
-- Once you've added your db config as listed above, go to the src folder form your terimal and excute `npx sequelize db:create`
+```
+    - Once you've added your db config as listed above, go to the src folder form your terimal and excute `npx sequelize db:create`
 ```
