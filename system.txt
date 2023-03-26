@@ -6,4 +6,26 @@ Search Flights
     Based on multiple criteria we can search for flights
     pagnation is also implemented
 
+Seqalizer
+    Seqalizer is used to serialize the data and send it to the client
+sequelize ORM
+orm is used to create the models and to perform the database operations
+sequalize cli ---> to create the models and migrations
+msql2 ---> to connect to the database
+
+
+npx sequelize init ---> to create the config, models, migrations and seeders folder
+
+seeders ---> to seed the data into the database 
+migrations ---> to create the tables in the database
+
+npx sequelize model:generate --name Flight --attributes origin:string,destination:string,departure:date,arrival:date,price:integer,seats:integer ---> to create the model
+npx sequelize db:migrate ---> to create the table in the database
+npx sequelize seed:generate --name flight-seed ---> to create the seed file
+npx sequelize db:seed:all ---> to seed the data into the database
+
+
+what is the differece between the npm and npx ?
+    npm is used to install the packages
+    npx is used to run the packages
 
