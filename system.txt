@@ -29,3 +29,4 @@ what is the differece between the npm and npx ?
     npm is used to install the packages
     npx is used to run the packages
 
+git commit --ammend
