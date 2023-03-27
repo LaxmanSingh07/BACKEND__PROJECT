@@ -17,9 +17,9 @@ class CityService
             throw{error};
         }
     }
-    async deleteCity(){
+    async deleteCity(id){
         try{
-            const response=this.cityRepo.deleteCity(cityId);
+            const response=this.cityRepo.deleteCity(id);
             return response;
         }
         catch(error){
@@ -27,9 +27,9 @@ class CityService
             throw{error};
         }
     }
-    async updateCity(){
+    async updateCity(id){
         try{
-            const response=this.cityRepo.updateCity(cityId,data);
+            const response=this.cityRepo.updateCity(id,data);
             return response;
         }
         catch(error){
@@ -37,10 +37,10 @@ class CityService
             throw{error};
         }
     }
-    async getCity()
+    async getCity(id)
     {
         try{
-            const response=this.cityRepo.getCity(cityId);
+            const response=this.cityRepo.getCity(id);
             return response;
         }
         catch(error){

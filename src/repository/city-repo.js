@@ -1,11 +1,9 @@
 //it is used to connect to the database
 
-const {City}=require('../models/index');
-class cityRepo
-{
-    async createCity({name})
-    {
-        try{
+const { City } = require('../models/index');
+class cityRepo {
+    async createCity({ name }) {
+        try {
             const newCity = await City.create({
                 // name:name
                 //shorthand for the above command is 
@@ -13,53 +11,51 @@ class cityRepo
 
             });
             return City;
-        }catch(error)
-        {
+        } catch (error) {
             console.log("Some error occured while creating the City");
-            throw {error}
+            throw { error }
         }
     }
-    async deleteCity(cityId)
-    {
-        try{
+    async deleteCity(cityId) {
+        try {
             await City.destroy({
-                where:{
-                    id:cityId
-                }});
-                return true;
-                
-            }catch(error)
-            {
+                where: {
+                    id: cityId
+                }
+            });
+            return true;
+
+        } catch (error) {
             console.log("Some error occured while creating the City");
-            throw {error}
-        }    
+            throw { error }
+        }
     }
-    async updateCity(cityId,data){ //{name:""}
-        try{
-            const city=await City.udate(data,{
+    async updateCity(cityId, data) { //{name:""}
+        try {
+            const city = await City.udate(data, {
                 //this is known as the where clause
-                where:{
-                    id:cityId
+                where: {
+                    id: cityId
                 }
             })
         }
-        catch(error)
-        {
+        catch (error) {
             console.log("Some error occured while updating a city");
 
         }
     }
-   
-    async getCity(cityId){
-        try{
-            const city=await City.findBypk(cityId);
+
+    async getCity(cityId) {
+        try {
+            // console.log(cityId);
+            const city = await City.findByPk(cityId);
             return city;
         }
-        catch(error){
+        catch (error) {
             console.log("Some erro corrured while finding a city");
-            throw{error};
+            throw { error };
         }
-    }   
+    }
 }
 
-module.exports=cityRepo;
+module.exports = cityRepo;
