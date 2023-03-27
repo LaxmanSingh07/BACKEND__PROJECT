@@ -20,8 +20,9 @@
 }
 ```
 
-- Once you've added your db config as listed above, go to the src folder form your terimal and excute `npx sequelize db:create`
+- Once you've added your db config as listed above, go to the src folder form your terimal and excute `npx sequelize db:create` and then execute
 
+`npx sequelize db:create`
 
 ## DB DESIGN
   - Airplane Table

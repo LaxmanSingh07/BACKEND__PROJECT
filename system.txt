@@ -43,3 +43,7 @@ migrations ---> it will help in incrementally updating the database
     it will help in deleting the tables in the database
 
 queryinterface --> 
+
+you can rollback migrations using the command 
+npx sequelize db:migrate:undo
+

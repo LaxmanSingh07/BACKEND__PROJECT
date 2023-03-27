@@ -1,6 +1,7 @@
 const express =require('express');
 const bodyParser = require('body-parser');
 const {PORT}= require('./config/serverCofig')
+const CityRepo=require('./repository/city-repo');
 const setupAndStartServer = async() => {
     //create the express object
     const app = express();
@@ -8,10 +9,13 @@ const setupAndStartServer = async() => {
     app.use(bodyParser.urlencoded({extended:true}));
     
     // const PORT=3000;
-    app.listen(PORT, () => {
+    app.listen(PORT, async () => {
         console.log(`Server is running on port ${PORT}`);
         // console.log(process);
-        console.log(process.env);
+        // console.log(process.env);
+        const repo=new CityRepo();
+        repo.createCity({cityName:'Pune'});
+        // console.log(repo);
         });
 //enviornment variable
 //in node dotenv is used to set the enviornment variable
