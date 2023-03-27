@@ -37,7 +37,7 @@ class cityRepo
             throw {error}
         }    
     }
-    async updateCity(cityId,data){
+    async updateCity(cityId,data){ //{name:""}
         try{
             const city=await City.udate(data,{
                 //this is known as the where clause
