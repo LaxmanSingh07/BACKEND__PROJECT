@@ -5,14 +5,16 @@ class CityService
     constructor(){
         this.cityRepo=new cityRepo();
     }
-    async createCity()
+    async createCity(data)
     {
+        
         try{
             const city=await this.cityRepo.createCity(data);
             return city;
         }
         catch(error){
-            console.log("Something went wron at service layer");
+            console.log("Something went  at service layer");
+            throw{error};
         }
     }
     async deleteCity(){
@@ -22,6 +24,7 @@ class CityService
         }
         catch(error){
             console.log("Something went wron at service layer");
+            throw{error};
         }
     }
     async updateCity(){
@@ -31,6 +34,7 @@ class CityService
         }
         catch(error){
             console.log("Something went wron at service layer");
+            throw{error};
         }
     }
     async getCity()
@@ -41,6 +45,7 @@ class CityService
         }
         catch(error){
             console.log("Something went wron at service layer");
+            throw{error};
         }
     }
 }

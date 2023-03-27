@@ -1,5 +1,5 @@
-const { CityService } = require('../services/city-service');
-
+const { CityService } = require('../services/index');
+// console.log(CityService);
 //contorller is the layer which is responsible for handling the request and response
 //controller sometimes is also called as the route handler
 
@@ -11,6 +11,7 @@ const { CityService } = require('../services/city-service');
 const cityService = new CityService();
 const create = async (req, res) => {
     try{
+        // console.log(req.body);
         const city = await cityService.createCity(req.body);
         return res.status(201).json({
             data:city,

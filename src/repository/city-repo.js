@@ -3,9 +3,6 @@
 const {City}=require('../models/index');
 class cityRepo
 {
-    constructor(){
-
-    }
     async createCity({name})
     {
         try{
