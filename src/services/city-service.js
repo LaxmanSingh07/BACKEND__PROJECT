@@ -27,7 +27,7 @@ class CityService
             throw{error};
         }
     }
-    async updateCity(id){
+    async updateCity(id,data){
         try{
             const response=this.cityRepo.updateCity(id,data);
             return response;

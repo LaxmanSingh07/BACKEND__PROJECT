@@ -32,12 +32,19 @@ class cityRepo {
     }
     async updateCity(cityId, data) { //{name:""}
         try {
-            const city = await City.udate(data, {
-                //this is known as the where clause
-                where: {
-                    id: cityId
-                }
-            })
+            // const city = await City.udate(data, {
+            //     //this is known as the where clause
+            //     where: {
+            //         id: cityId
+            //     },
+            //     returning:true,
+            //     plain:true
+            
+            // });
+            const city=await City.findByPk(cityId);
+            city.name=data.name;
+            await city.save();
+            return city
         }
         catch (error) {
             console.log("Some error occured while updating a city");
@@ -47,7 +54,6 @@ class cityRepo {
 
     async getCity(cityId) {
         try {
-            // console.log(cityId);
             const city = await City.findByPk(cityId);
             return city;
         }
