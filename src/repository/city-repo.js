@@ -1,16 +1,17 @@
 //it is used to connect to the database
 
 const { City } = require('../models/index');
+const { Op } = require('sequelize');
 class cityRepo {
     async createCity({ name }) {
         try {
-            const newCity = await City.create({
+            const city = await City.create({
                 // name:name
                 //shorthand for the above command is 
-                name
-
+                // name:name
+                name:name
             });
-            return City;
+            return city;
         } catch (error) {
             console.log("Some error occured while creating the City");
             throw { error }
@@ -44,11 +45,11 @@ class cityRepo {
             const city=await City.findByPk(cityId);
             city.name=data.name;
             await city.save();
-            return city
+            return city;
         }
         catch (error) {
             console.log("Some error occured while updating a city");
-
+            throw {error}
         }
     }
 
@@ -58,10 +59,31 @@ class cityRepo {
             return city;
         }
         catch (error) {
-            console.log("Some erro corrured while finding a city");
+            console.log("Some erro corrured while finding a city",error);
             throw { error };
         }
     }
+    async getAllCities(filter) { //filter can be empty also
+        try {
+            if(filter.name)
+            {
+                const cities=await City.findAll({
+                    where:{
+                        name:{
+                            [Op.startsWith]:filter.name
+                        }
+                    }
+                    
+                })
+                return cities;
+            }
+          const cities = await City.findAll();
+          return cities;
+        } catch (error) {
+          console.log("Something went wrong in the repo layer", error);
+          throw { error };
+        }
+      }
 }
 
 module.exports = cityRepo;

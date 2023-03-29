@@ -35,3 +35,5 @@
   - One airport can have many flights, but a flight belongs to one airport 
 
 
+ Seuqelize like query
+like is a operator that is used to find the data that matches the pattern you specify. It is used with the WHERE clause of the SELECT statement.
