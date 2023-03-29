@@ -47,3 +47,11 @@ like is a operator that is used to find the data that matches the pattern you sp
 
   RELATIONSHIP:
   Citay has many airports and one airport belongs to one city(one to many)
+
+  `some commands`
+
+  `npx sequelize model:generate --name City --attributes name:string`
+  `npx sequelize db:migrate`
+
+
+  `npx sequelize seed:generate --name add-airports`
