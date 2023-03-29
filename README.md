@@ -37,3 +37,13 @@
 
  Seuqelize like query
 like is a operator that is used to find the data that matches the pattern you specify. It is used with the WHERE clause of the SELECT statement.
+
+
+
+## Tables 
+
+### City --> id,name,createdAt,updatedAt
+### Airport --> id,name,cityId,createdAt,updatedAt
+
+  RELATIONSHIP:
+  Citay has many airports and one airport belongs to one city(one to many)

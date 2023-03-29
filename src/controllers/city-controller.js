@@ -7,6 +7,12 @@ const { CityService } = require("../services/index");
  * POST
  * data->req.body
  */
+//what is the role of the controller
+//1. it is responsible for handling the request and response
+//2. it is responsible for calling the service layer
+//3. it is responsible for sending the response back to the client
+//4. it is responsible for sending the error back to the client
+//5. it is responsible for sending the success response back to the client
 
 const cityService = new CityService();
 const create = async (req, res) => {

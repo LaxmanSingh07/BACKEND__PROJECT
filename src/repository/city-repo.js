@@ -1,5 +1,7 @@
 //it is used to connect to the database
 
+
+
 const { City } = require('../models/index');
 const { Op } = require('sequelize');
 class cityRepo {
