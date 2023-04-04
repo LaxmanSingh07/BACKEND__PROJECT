@@ -15,14 +15,14 @@ module.exports = {
    await queryInterface.bulkInsert('Airports',[
     {
       name:'Kempegowda International Airport',
-      address:'Devanahalli, Bengaluru, Karnataka 560300',
+      // address:'Devanahalli, Bengaluru, Karnataka 560300',
       cityId:3,
       createdAt:new Date(),
       updatedAt:new Date()
     },
     {
       name:'Chhatrapati Shivaji International Airport',
-      address:'Sahar, Andheri East, Mumbai, Maharashtra 400099',
+      // address:'Sahar, Andheri East, Mumbai, Maharashtra 400099',
       cityId:3,
       createdAt:new Date(),
       updatedAt:new Date()
@@ -30,7 +30,7 @@ module.exports = {
     },
     {
       name:'Indira Gandhi International Airport',
-      address:'Delhi, New Delhi, Delhi 110037',
+      // address:'Delhi, New Delhi, Delhi 110037',
       cityId:2,
       createdAt:new Date(),
       updatedAt:new Date()
@@ -38,7 +38,7 @@ module.exports = {
     },
     {
       name:'Chennai International Airport',
-      address:'Meenambakkam, Chennai, Tamil Nadu 600027',
+      // address:'Meenambakkam, Chennai, Tamil Nadu 600027',
       cityId:1,
       createdAt:new Date(),
       updatedAt:new Date()
