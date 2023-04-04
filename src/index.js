@@ -5,6 +5,7 @@ const ApiRoutes=require('./routes/index');
 const db = require('./models/index');
 
 const {Airport,City}=require('./models/index');
+const {Airplane}=require('./models/index');
 const airport = require('./models/airport');
 // const city = require('./models/city');
 const setupAndStartServer = async() => {
@@ -15,6 +16,7 @@ const setupAndStartServer = async() => {
     app.use(bodyParser.urlencoded({extended:true}));
     
     app.use('/api',ApiRoutes) ;
+
     // const PORT=3000;
     app.listen(PORT, async () => {
         console.log(`Server is running on port ${PORT}`);
@@ -61,6 +63,7 @@ const setupAndStartServer = async() => {
 //     })
 //     // console.log(airports);
 
+
 //Model Synchronization --> it is used to create the tables in the database
         // db.sequelize.sync({alert:true});
     //     const city=await City.findOne({
@@ -85,11 +88,17 @@ const setupAndStartServer = async() => {
                 // console.log(city);
                 // console.log(airports)
                 if(process.env.SYNC_DB){
-            // db.sequelize.sync({alert:true});
+            db.sequelize.sync({alert:true});
             //PROBLEM IN SYNCING THE DATABASE
             // db.sequelize.sync({force:true}); // it will delete the existing table and create a new table
             
         }
+
+        // await Airplane.create({
+        //     modelNumber:'Airbus A320',
+        //     // capacity:180
+            
+        // }); 
 });
 
 }
