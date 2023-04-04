@@ -21,8 +21,7 @@ module.exports = (sequelize, DataTypes) => {
   Airport.init({
     name: {
       type: DataTypes.STRING,
-      allowNull: false,
-      unique: true
+      allowNull: false
     },
     address: DataTypes.STRING,
     cityId:{type:DataTypes.INTEGER,
@@ -34,3 +33,4 @@ module.exports = (sequelize, DataTypes) => {
   });
   return Airport;
 };
+
